@@ -1,0 +1,26 @@
+{% extends "toolbar.html" %}
+{% block content %}
+<table class="table table-hover">
+    <caption>课程信息</caption>
+    <thead>
+        <tr>
+            <th>课程号</th>
+            <th>课程名</th>
+            <th>学分</th>
+            <th>专业</th>
+            <th>教师</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for class in classes %}
+        <tr>
+            <td>{{ class.cno }}</td>
+            <td>{{ class.cname }}</td>
+            <td>{{ class.credit }}</td>
+            <td>{{ class.cdept }}</td>
+            <td>{{ class.tname }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

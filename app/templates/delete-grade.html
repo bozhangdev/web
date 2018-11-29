@@ -1,0 +1,16 @@
+{% extends "toolbar.html" %}
+{% block content %}
+<div>
+    <form role="form" method="POST" action="/delete-grade-result">
+        <div class="form-group">
+            <label for="sno">要删除成绩的学生学号</label>
+            <input type="text" class="form-control" id="sno" name="sno" placeholder="请输入学号" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="cno">要删除成绩的课程号</label>
+            <input type="text" class="form-control" id="cno" name="cno" placeholder="请输入课程号" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+{% endblock %}

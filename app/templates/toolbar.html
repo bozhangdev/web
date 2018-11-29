@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>信息管理</title>
+    <link rel="stylesheet" href="/static/css/boot.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/boot.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index">成绩管理系统</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/students">学生信息查询</a></li>
+                    <li><a href="/classes">课程信息查询</a></li>
+                    <li><a href="/grades">学生总成绩查询</a></li>
+                    <li><a href="/add-grade">成绩录入</a></li>
+                    <li><a href="/delete-grade">删除成绩</a></li>
+                </ul>
+            </div>
+            <form class="form-inline navbar-form pull-right" method="POST" action="/student-grade">
+                <input class="form-control" type="text" placeholder="学生学号" name="sno" autocomplete="off">
+                <button class="btn btn-success-outline" type="submit">搜索详细成绩信息</button>
+            </form>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
