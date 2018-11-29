@@ -1,9 +1,9 @@
 from app import app
-import sqlite3
+import sqlite3, os
 from flask import g, request
 from flask import render_template
 
-DATABASE = '/Users/JangBak/Documents/数据库/实验1/web/school.db'
+DATABASE = os.path.join(os.path.dirname(__file__), '../school.db')
 
 
 def connect_db():
